@@ -1,0 +1,7 @@
+{
+  "status": "complete",
+  "run_id": "exp04_20261122T082326Z",
+  "completed_utc": "2026-11-22T08:31:53.047089+00:00",
+  "outer_folds_completed": 5,
+  "outer_oof_predictions": 3051
+}

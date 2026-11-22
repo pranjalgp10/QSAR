@@ -1,0 +1,6 @@
+{
+  "audit": "deterministic; no random sampling",
+  "planned_evaluation_seeds_from_experiment_01": [140, 141],
+  "model_fit_or_cv_seed_consumed": false,
+  "note": "No model fitting or evaluation splits were run in this preflight-blocked stage."
+}

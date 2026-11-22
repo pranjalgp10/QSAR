@@ -1,0 +1,12 @@
+Final QSAR development run: final_qsar_20261122T143000
+
+Stage 1 repository and prior-experiment inspection: completed.
+Stage 2 data/provenance audit: completed.
+Stage 3 evaluation protocol freeze: not started because the fail-closed data gate did not pass.
+Stages 4–9: not run.
+
+Command executed:
+.venv\Scripts\python.exe experiments\final_qsar\final_qsar_20261122T143000\audit_data.py
+
+Audit script exit status: 0.
+Decision: stop before training because IC50 source units cannot be independently verified; upstream raw preprocessing is unavailable; and InChIKey-equivalent rows need a weighting policy.

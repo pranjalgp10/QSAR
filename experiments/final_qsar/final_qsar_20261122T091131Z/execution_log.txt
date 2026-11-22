@@ -1,0 +1,5 @@
+Stage 1 prior experiments and repository: inspected.
+Stage 2 dataset/provenance audit: completed; source notebook documents unit counts and pIC50-to-nM conversion; raw_data.csv is unavailable for row replay.
+Stage 3 evaluation protocol: frozen in config.json; internal scaffold evaluation only.
+Stages 4-8: evaluation, model fit, postprocessing, report, serialization, and tests completed.
+Run remains internal scaffold validation; no external/generated-molecule validation.

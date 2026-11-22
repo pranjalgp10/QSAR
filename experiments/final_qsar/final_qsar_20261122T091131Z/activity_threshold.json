@@ -1,0 +1,11 @@
+{
+  "definition": "median pIC50 of full approved development dataset",
+  "threshold_pIC50": 7.376750709602099,
+  "active_rule": "pIC50 >= threshold",
+  "inactive_rule": "pIC50 < threshold",
+  "active_count": 1529,
+  "inactive_count": 1522,
+  "ties_at_threshold": 5,
+  "n": 3051,
+  "interpretation": "Relative dataset-dependent VECTOR+-compatible split, not a universal potency threshold."
+}

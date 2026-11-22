@@ -1,0 +1,7 @@
+{
+  "status": "complete",
+  "run_id": "exp03_20261122T063732Z",
+  "completed_utc": "2026-11-22T07:19:10.537135+00:00",
+  "outer_folds_completed": 5,
+  "candidate_fold_scores": 200
+}

@@ -1,0 +1,24 @@
+{
+  "run_id": "final_qsar_20261122T091131Z",
+  "dataset": "data/processed/syk_qsar_curated.csv",
+  "expected_dataset_sha256": "541d081a227ea342b4c01b766ea4c1d1b782329f95f685c22c4de5adc1a51f25",
+  "fingerprint": {"type": "Morgan", "radius": 2, "bits": 2048},
+  "outer_cv": {"method": "shuffled GroupKFold by Bemis-Murcko scaffold", "folds": 5, "seeds": [140, 141]},
+  "calibration": {"method": "GroupShuffleSplit inside each outer training partition", "fraction": 0.2, "nominal_interval_coverage": [0.8, 0.9, 0.95]},
+  "stack_oof_folds": 3,
+  "primary_model": "five_model_ridge_alpha_1",
+  "stack_candidates": {
+    "five_model_ridge_alpha_1": ["RandomForest", "ExtraTrees", "SVR", "XGBoost", "HistGradientBoosting"],
+    "svr_complementary_ridge_alpha_100": ["RandomForest", "XGBoost", "HistGradientBoosting", "SVR"],
+    "boosting_pair_ridge_alpha_1": ["XGBoost", "HistGradientBoosting"]
+  },
+  "direct_classifiers": ["RandomForestClassifier", "XGBoostClassifier", "LogisticRegression"],
+  "median_split": {"active_rule": "pIC50 >= training-only median", "inactive_rule": "pIC50 < training-only median", "sensitivity_offsets_pIC50": [-0.25, 0.25], "sensitivity_percentiles": [0.4, 0.6]},
+  "uncertainty": ["ensemble disagreement SD", "1 - maximum Morgan Tanimoto to fit structures", "outer-fit calibration-referenced mean percentile rank; deployment reference ranks use held-out OOF experimental distributions"],
+  "precision_coverage_fractions": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+  "y_scrambling": {"permutations": 20, "model": "fixed HistGradientBoosting", "scaffold_folds": 5, "seed": 9201},
+  "learning_curve": {"model": "fixed HistGradientBoosting", "fractions": [0.2, 0.4, 0.6, 0.8, 1.0]},
+  "representation_sensitivity": ["Morgan radius 3", "Morgan radius 2 plus MolWt, MolLogP, TPSA, HBD, HBA, RotBonds"],
+  "selection_policy": "Primary five-model Ridge stack predeclared from Experiment 1 stability; compare Experiment 3 SVR and boosting pair as ablations. Do not choose from outer-fold rankings.",
+  "external_validation_available": false
+}

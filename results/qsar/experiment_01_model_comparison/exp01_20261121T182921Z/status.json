@@ -1,0 +1,6 @@
+{
+  "status": "interrupted_before_first_fold_checkpoint",
+  "reason": "Initial full run was stopped because the first-fold runtime was too high and progress was not sufficiently observable.",
+  "outputs": "Configuration and partial log retained; no fold metrics were accepted.",
+  "superseded_by": "exp01_20261121T183530Z"
+}

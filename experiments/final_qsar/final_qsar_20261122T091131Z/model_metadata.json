@@ -1,0 +1,39 @@
+{
+  "model": "Five-model Ridge stack alpha=1",
+  "architecture_selection": "predeclared from Experiment 1 repeated-fold stability; not selected by outer metrics in this run",
+  "dataset_sha256": "541d081a227ea342b4c01b766ea4c1d1b782329f95f685c22c4de5adc1a51f25",
+  "n_training": 3051,
+  "fingerprint": {
+    "type": "Morgan",
+    "radius": 2,
+    "bits": 2048
+  },
+  "threshold": {
+    "definition": "median pIC50 of full approved development dataset",
+    "threshold_pIC50": 7.376750709602099,
+    "active_rule": "pIC50 >= threshold",
+    "inactive_rule": "pIC50 < threshold",
+    "active_count": 1529,
+    "inactive_count": 1522,
+    "ties_at_threshold": 5,
+    "n": 3051,
+    "interpretation": "Relative dataset-dependent VECTOR+-compatible split, not a universal potency threshold."
+  },
+  "intervals": {
+    "molecule_q90_half_width": 1.0997175801970824,
+    "scaffold_q90_half_width": 1.4815872717104774,
+    "source": "repeated scaffold OOF residuals; approximate for full refit"
+  },
+  "direct_classifier_retained": false,
+  "reliability_status": "all valid molecules return caution; no validated pseudolabel acceptance threshold was established",
+  "versions": {
+    "python": "3.14.8",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1",
+    "rdkit": "2026.09.2",
+    "xgboost": "3.4.1"
+  },
+  "training_seed": 1717,
+  "combined_reliability_reference": "empirical distributions of held-out repeated scaffold OOF disagreement and AD distances; no pseudolabel acceptance cutoff"
+}

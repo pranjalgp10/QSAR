@@ -1,0 +1,13 @@
+{
+  "experiment_id": "04_reliability_applicability_domain_intervals_precision_coverage",
+  "data": "data/processed/syk_qsar_curated.csv",
+  "historical_benchmark_test_used_for_tuning": false,
+  "fingerprint": {"family": "Morgan/ECFP", "radius": 2, "bits": 2048},
+  "outer_split": {"method": "shuffled GroupKFold by Bemis-Murcko scaffold", "folds": 5, "seed": 4104},
+  "calibration_split": {"method": "GroupShuffleSplit by scaffold inside each outer training fold", "fraction_of_outer_train": 0.2, "seed_offset": 7000},
+  "stack": {"meta_model": "Ridge(alpha=1.0)", "oof_folds": 3, "base_models": ["RandomForest", "ExtraTrees", "SVR", "XGBoost", "HistGradientBoosting"], "hyperparameters": "frozen from preserved benchmark report; no tuning in this experiment"},
+  "uncertainty_diagnostics": ["standard deviation of five base-model predictions", "1 minus maximum Morgan/Tanimoto similarity to model-fit structures", "mean percentile rank of disagreement and applicability-domain distance"],
+  "intervals": {"methods": ["molecule-level split conformal", "scaffold-maximum split conformal"], "nominal_coverage": [0.8, 0.9, 0.95], "primary": 0.9},
+  "precision_coverage": {"retained_fraction": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0], "descriptive_absolute_error_tolerances_pIC50": [0.5, 1.0], "cutoff_selection": false},
+  "historical_test_caveat": "All new estimates are internal scaffold cross-validation. Earlier evaluation of this dataset has been viewed; these are not independent external-validation results."
+}

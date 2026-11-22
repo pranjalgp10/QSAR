@@ -1,0 +1,220 @@
+{
+  "experiment": "04 reliability, applicability domain, intervals, and precision-coverage",
+  "run_id": "exp04_20261122T082326Z",
+  "dataset_rows": 3051,
+  "dataset_sha256": "541d081a227ea342b4c01b766ea4c1d1b782329f95f685c22c4de5adc1a51f25",
+  "outer_split": {
+    "method": "shuffled GroupKFold by Bemis-Murcko scaffold",
+    "folds": 5,
+    "seed": 4104
+  },
+  "fit_calibration_test_scaffold_disjoint": true,
+  "pooled_oof_metrics": [
+    {
+      "model": "Stacking",
+      "n": 3051,
+      "MAE": 0.505325601795061,
+      "MSE": 0.4578566687334045,
+      "RMSE": 0.6766510686708509,
+      "R2": 0.6241085544711711,
+      "median_absolute_error": 0.38136092631491536,
+      "residual_mean": 0.01115595294153162,
+      "residual_sd": 0.6766700005046236
+    },
+    {
+      "model": "RandomForest",
+      "n": 3051,
+      "MAE": 0.5146017653864247,
+      "MSE": 0.47848265652596467,
+      "RMSE": 0.6917244079298956,
+      "R2": 0.6071750185061859,
+      "median_absolute_error": 0.380670991173262,
+      "residual_mean": 0.0153421428718563,
+      "residual_sd": 0.69166760627007
+    },
+    {
+      "model": "ExtraTrees",
+      "n": 3051,
+      "MAE": 0.5175800324662708,
+      "MSE": 0.4949980657209801,
+      "RMSE": 0.7035609893399293,
+      "R2": 0.5936161878507582,
+      "median_absolute_error": 0.3782794512109362,
+      "residual_mean": 0.0074758610576270345,
+      "residual_sd": 0.7036365918186083
+    },
+    {
+      "model": "SVR",
+      "n": 3051,
+      "MAE": 0.5924908970989975,
+      "MSE": 0.6162589957024027,
+      "RMSE": 0.7850216530149998,
+      "R2": 0.4940633160252146,
+      "median_absolute_error": 0.4542811043952657,
+      "residual_mean": -0.026007370081044926,
+      "residual_sd": 0.7847193401265149
+    },
+    {
+      "model": "XGBoost",
+      "n": 3051,
+      "MAE": 0.5109374993848631,
+      "MSE": 0.4675522106418291,
+      "RMSE": 0.6837778956955461,
+      "R2": 0.6161487025960746,
+      "median_absolute_error": 0.38176063637750346,
+      "residual_mean": 0.009020763434256422,
+      "residual_sd": 0.6838304655363077
+    },
+    {
+      "model": "HistGradientBoosting",
+      "n": 3051,
+      "MAE": 0.5172280739167855,
+      "MSE": 0.4765218281837456,
+      "RMSE": 0.6903056049198395,
+      "R2": 0.608784820547575,
+      "median_absolute_error": 0.3976467776524757,
+      "residual_mean": -0.00781797995493384,
+      "residual_sd": 0.6903744809873393
+    }
+  ],
+  "spearman_score_vs_absolute_error": {
+    "disagreement_sd": 0.18469796993686882,
+    "applicability_domain_distance": 0.22451530113368473,
+    "combined_uncertainty_rank": 0.2506316848810815
+  },
+  "descriptive_full_coverage_error_tolerances": {
+    "0.5": 0.6099639462471321,
+    "1.0": 0.8718452966240576
+  },
+  "interval_coverage": [
+    {
+      "method": "molecule",
+      "nominal_coverage": 0.8,
+      "empirical_molecule_coverage": 0.7885939036381514,
+      "mean_interval_width": 1.550497707263163,
+      "scaffolds_with_all_molecules_covered": 946,
+      "n_test_scaffolds": 1326,
+      "empirical_whole_scaffold_containment": 0.7134238310708899
+    },
+    {
+      "method": "molecule",
+      "nominal_coverage": 0.9,
+      "empirical_molecule_coverage": 0.887905604719764,
+      "mean_interval_width": 2.1351569410582036,
+      "scaffolds_with_all_molecules_covered": 1104,
+      "n_test_scaffolds": 1326,
+      "empirical_whole_scaffold_containment": 0.832579185520362
+    },
+    {
+      "method": "molecule",
+      "nominal_coverage": 0.95,
+      "empirical_molecule_coverage": 0.9429695181907571,
+      "mean_interval_width": 2.7577139619850923,
+      "scaffolds_with_all_molecules_covered": 1200,
+      "n_test_scaffolds": 1326,
+      "empirical_whole_scaffold_containment": 0.9049773755656109
+    },
+    {
+      "method": "scaffold",
+      "nominal_coverage": 0.8,
+      "empirical_molecule_coverage": 0.8698787282858079,
+      "mean_interval_width": 2.0049987619534186,
+      "scaffolds_with_all_molecules_covered": 1076,
+      "n_test_scaffolds": 1326,
+      "empirical_whole_scaffold_containment": 0.8114630467571644
+    },
+    {
+      "method": "scaffold",
+      "nominal_coverage": 0.9,
+      "empirical_molecule_coverage": 0.9416584726319239,
+      "mean_interval_width": 2.7061500385408577,
+      "scaffolds_with_all_molecules_covered": 1200,
+      "n_test_scaffolds": 1326,
+      "empirical_whole_scaffold_containment": 0.9049773755656109
+    },
+    {
+      "method": "scaffold",
+      "nominal_coverage": 0.95,
+      "empirical_molecule_coverage": 0.9744346116027532,
+      "mean_interval_width": 3.385367441821266,
+      "scaffolds_with_all_molecules_covered": 1262,
+      "n_test_scaffolds": 1326,
+      "empirical_whole_scaffold_containment": 0.951734539969834
+    }
+  ],
+  "precision_coverage_at_10_percent_retained": [
+    {
+      "uncertainty_score": "disagreement_sd",
+      "target_retained_fraction": 0.1,
+      "actual_retained_fraction": 0.10029498525073746,
+      "n_retained": 306,
+      "MAE": 0.3755949566546236,
+      "RMSE": 0.5120022524961655,
+      "p90_absolute_error": 0.8340011219839121,
+      "fraction_within_0.5_pIC50": 0.7483660130718954,
+      "fraction_within_1.0_pIC50": 0.9379084967320261
+    },
+    {
+      "uncertainty_score": "applicability_domain_distance",
+      "target_retained_fraction": 0.1,
+      "actual_retained_fraction": 0.10029498525073746,
+      "n_retained": 306,
+      "MAE": 0.3797211686338319,
+      "RMSE": 0.508797833004955,
+      "p90_absolute_error": 0.770739615728766,
+      "fraction_within_0.5_pIC50": 0.7320261437908496,
+      "fraction_within_1.0_pIC50": 0.9607843137254902
+    },
+    {
+      "uncertainty_score": "combined_uncertainty_rank",
+      "target_retained_fraction": 0.1,
+      "actual_retained_fraction": 0.10029498525073746,
+      "n_retained": 306,
+      "MAE": 0.33379877039850925,
+      "RMSE": 0.4535424263343263,
+      "p90_absolute_error": 0.7482087265326762,
+      "fraction_within_0.5_pIC50": 0.7843137254901961,
+      "fraction_within_1.0_pIC50": 0.9477124183006536
+    }
+  ],
+  "scaffold_cluster_bootstrap_95CI": {
+    "RMSE": {
+      "estimate": 0.6758480027249736,
+      "cluster_bootstrap_95CI": [
+        0.6429707298679893,
+        0.7085971748615493
+      ]
+    },
+    "MAE": {
+      "estimate": 0.5048957643125297,
+      "cluster_bootstrap_95CI": [
+        0.4783930542119369,
+        0.5299036662123351
+      ]
+    },
+    "molecule_90_coverage": {
+      "estimate": 0.8883344845267819,
+      "cluster_bootstrap_95CI": [
+        0.8716376784712361,
+        0.904071208176191
+      ]
+    },
+    "scaffold_90_full_containment": {
+      "estimate": 0.904740573152338,
+      "cluster_bootstrap_95CI": [
+        0.8883861236802413,
+        0.9200603318250377
+      ]
+    }
+  },
+  "selected_pseudolabel_threshold": null,
+  "limitations": "Internal scaffold CV on a dataset whose earlier model/test results have been inspected; no independent external cohort or assay metadata. Disagreement and similarity are diagnostics rather than probabilities. Empirical coverage does not establish calibration on generated molecules or under scaffold distribution shift. No cutoff was selected from these curves.",
+  "software": {
+    "python": "3.14.8",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1",
+    "rdkit": "2026.09.2",
+    "xgboost": "3.4.1"
+  }
+}

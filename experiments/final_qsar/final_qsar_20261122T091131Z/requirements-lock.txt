@@ -1,0 +1,10 @@
+# Locked direct and plotting/test dependencies from the recorded project environment (Python 3.14.8).
+joblib==1.6.0
+matplotlib==3.11.2
+numpy==2.5.5
+pandas==3.1.1
+pytest==9.2.0
+rdkit==2026.9.2
+scikit-learn==1.9.1
+scipy==1.18.1
+xgboost==3.4.1

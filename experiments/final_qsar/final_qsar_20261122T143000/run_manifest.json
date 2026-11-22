@@ -1,0 +1,20 @@
+{
+  "run_id": "final_qsar_20261122T143000",
+  "status": "blocked_preflight",
+  "stage_completed": "stage_2_data_integrity_audit",
+  "model_training_started": false,
+  "curated_dataset_sha256": "541d081a227ea342b4c01b766ea4c1d1b782329f95f685c22c4de5adc1a51f25",
+  "expected_curated_dataset_sha256": "541d081a227ea342b4c01b766ea4c1d1b782329f95f685c22c4de5adc1a51f25",
+  "historical_experiments_preserved": true,
+  "blocking_issues": [
+    "IC50 unit and assay/source provenance unavailable",
+    "Upstream raw data and IQR preprocessing record unavailable",
+    "Four InChIKey-equivalent tautomer pairs remain distinct in the hash-pinned dataset",
+    "Exact VECTOR+ implementation/source activity-label code unavailable"
+  ],
+  "outputs_created": [
+    "data_audit.json", "data_audit.md", "excluded_records.csv",
+    "duplicate_audit.csv", "dataset_manifest.json", "methods.md",
+    "limitations.md", "model_selection_rationale.md", "final_report.md"
+  ]
+}

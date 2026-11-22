@@ -1,0 +1,17 @@
+{
+  "run_id": "final_qsar_20261122T091131Z",
+  "completed_utc": "2026-11-22T10:24:31.906967+00:00",
+  "status": "complete_internal_evaluation_tests_passed",
+  "dataset_sha256": "541d081a227ea342b4c01b766ea4c1d1b782329f95f685c22c4de5adc1a51f25",
+  "outer_folds": 10,
+  "oof_predictions": 6102,
+  "model_path": "model.joblib",
+  "not_external_validation": true,
+  "configs": "config.json",
+  "tests_passed": true,
+  "entrypoint": "run_pipeline.py",
+  "unique_oof_molecules": 3051,
+  "oof_prediction_records_per_unique_molecule": 2,
+  "environment_versions": "environment_versions.txt",
+  "tests": "tests/"
+}

@@ -1,0 +1,50 @@
+{
+  "run_id": "final_qsar_20261122T091131Z",
+  "created_utc": "2026-11-22T10:28:06.014163+00:00",
+  "raw_dataset": {
+    "path": "processed_df.csv",
+    "sha256": "52dad48b3308134a553c8db38b4fc0c188eff0ccdf51e7477e8f6252a3679532",
+    "records": 3176
+  },
+  "all_mols": {
+    "path": "C:\\Users\\pranj\\Downloads\\all_mols.csv",
+    "sha256": "52dad48b3308134a553c8db38b4fc0c188eff0ccdf51e7477e8f6252a3679532",
+    "byte_identical_to_processed_df": true
+  },
+  "processing_notebook": {
+    "path": "C:\\Users\\pranj\\Downloads\\Data_processing.ipynb",
+    "sha256": "feaaacc60317f1e4a482305ae1106e5e8f86f6472846d0abe4405a6cbe076388",
+    "unit_counts": {
+      "nM": 3485,
+      "pIC50": 28
+    },
+    "raw_input_rows": 3513,
+    "final_processed_rows": 3176
+  },
+  "curated_dataset": {
+    "path": "data\\processed\\syk_qsar_curated.csv",
+    "sha256": "541d081a227ea342b4c01b766ea4c1d1b782329f95f685c22c4de5adc1a51f25",
+    "expected_sha256": "541d081a227ea342b4c01b766ea4c1d1b782329f95f685c22c4de5adc1a51f25",
+    "records": 3051
+  },
+  "experiment_sources_inspected": {
+    "experiment_01": "results/qsar/experiment_01_model_comparison/exp01_20261121T183530Z",
+    "experiment_03": "results/qsar/experiment_03_stacking_optimisation/exp03_20261122T063732Z",
+    "experiment_04": "results/qsar/experiment_04_reliability/exp04_20261122T082326Z"
+  },
+  "modeling_started": true,
+  "blocking_issues": [],
+  "warnings": [
+    "The original raw_data.csv is unavailable for row-level replay of source units or the upstream duplicate/IQR operations.",
+    "The processing notebook's conversion comment says pIC50 is based on \u03bcM, while its 10^9 conversion factor assumes the conventional -log10(molar) pIC50 scale. ChEMBL's documentation defines pChEMBL on the molar scale (1 nM = 9); without raw source rows, the comment/value provenance cannot be independently confirmed.",
+    "Four InChIKey-equivalent tautomer pairs remain distinct in the hash-pinned dataset; all four pairs have identical IC50 labels and remain within scaffold groups.",
+    "The exact VECTOR+ source implementation is absent; the attached median-split procedure can be followed, but source-level parity cannot be verified.",
+    "Assay IDs, source citations, censoring and replicate metadata are not preserved in the final CSV; results are not assay-harmonized or externally validated."
+  ],
+  "software": {
+    "python": "3.14.8",
+    "pandas": "3.1.1",
+    "numpy": "2.5.5",
+    "rdkit": "2026.09.2"
+  }
+}

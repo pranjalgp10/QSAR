@@ -1,0 +1,327 @@
+{
+  "nested_scaffold_cv_metrics_train_partition": {
+    "RandomForest": {
+      "n": 2006,
+      "MAE": 0.49139259998870227,
+      "MSE": 0.452346771528156,
+      "RMSE": 0.6725672988840269,
+      "R2": 0.6225007158881122
+    },
+    "ExtraTrees": {
+      "n": 2006,
+      "MAE": 0.49685326852936956,
+      "MSE": 0.45789783868093054,
+      "RMSE": 0.6766814898317601,
+      "R2": 0.6178681551888281
+    },
+    "SVR": {
+      "n": 2006,
+      "MAE": 0.6096616162890013,
+      "MSE": 0.6457303855260174,
+      "RMSE": 0.8035735097214302,
+      "R2": 0.4611152911695049
+    },
+    "XGBoost": {
+      "n": 2006,
+      "MAE": 0.4826500132402511,
+      "MSE": 0.43715827430887855,
+      "RMSE": 0.6611794569622369,
+      "R2": 0.6351760508034975
+    },
+    "HistGradientBoosting": {
+      "n": 2006,
+      "MAE": 0.4900331502415293,
+      "MSE": 0.44380414820640407,
+      "RMSE": 0.6661862714034297,
+      "R2": 0.6296298353853167
+    },
+    "Stacking": {
+      "n": 2006,
+      "MAE": 0.47776278751702156,
+      "MSE": 0.42305462084286427,
+      "RMSE": 0.6504264914983585,
+      "R2": 0.6469460454666541
+    }
+  },
+  "winner_by_validation_rmse": "HistGradientBoosting",
+  "selection_metrics": {
+    "RandomForest": {
+      "n": 202,
+      "MAE": 0.5414099433702787,
+      "MSE": 0.5389681566359822,
+      "RMSE": 0.7341445066442861,
+      "R2": 0.6629521049247284
+    },
+    "ExtraTrees": {
+      "n": 202,
+      "MAE": 0.5375093485481858,
+      "MSE": 0.5469475926454737,
+      "RMSE": 0.7395590528453246,
+      "R2": 0.6579621030521255
+    },
+    "SVR": {
+      "n": 202,
+      "MAE": 0.7128507631900649,
+      "MSE": 0.885815830266611,
+      "RMSE": 0.9411778951221766,
+      "R2": 0.4460482361718384
+    },
+    "XGBoost": {
+      "n": 202,
+      "MAE": 0.5413305605880279,
+      "MSE": 0.5549921550776808,
+      "RMSE": 0.7449779561018439,
+      "R2": 0.6529313738686048
+    },
+    "HistGradientBoosting": {
+      "n": 202,
+      "MAE": 0.5248442009862968,
+      "MSE": 0.4979519558815785,
+      "RMSE": 0.7056571092829566,
+      "R2": 0.6886019025204583
+    },
+    "Stacking": {
+      "n": 202,
+      "MAE": 0.5328411078242262,
+      "MSE": 0.5116517742795814,
+      "RMSE": 0.7152983812924376,
+      "R2": 0.6800346153865006
+    }
+  },
+  "test_metrics_all_models": {
+    "RandomForest": {
+      "n": 520,
+      "MAE": 0.513289729092388,
+      "MSE": 0.49538734430139997,
+      "RMSE": 0.7038375837516777,
+      "R2": 0.5961100218168356
+    },
+    "ExtraTrees": {
+      "n": 520,
+      "MAE": 0.5152607218045294,
+      "MSE": 0.5211636435207655,
+      "RMSE": 0.7219166458260715,
+      "R2": 0.5750945698697665
+    },
+    "SVR": {
+      "n": 520,
+      "MAE": 0.5877953343982049,
+      "MSE": 0.6215562605200349,
+      "RMSE": 0.788388394460519,
+      "R2": 0.4932443321597856
+    },
+    "XGBoost": {
+      "n": 520,
+      "MAE": 0.498919472013826,
+      "MSE": 0.46493658044570363,
+      "RMSE": 0.681862581790278,
+      "R2": 0.6209365711641583
+    },
+    "HistGradientBoosting": {
+      "n": 520,
+      "MAE": 0.5071584460862657,
+      "MSE": 0.4676068906113809,
+      "RMSE": 0.6838178782478423,
+      "R2": 0.6187594636401892
+    },
+    "Stacking": {
+      "n": 520,
+      "MAE": 0.4924949892300004,
+      "MSE": 0.4546747798272219,
+      "RMSE": 0.6742957658381238,
+      "R2": 0.6293030312192964
+    }
+  },
+  "selected_test_scaffold_bootstrap_95ci": {
+    "MAE": [
+      0.4555559364148,
+      0.5560267873450064
+    ],
+    "RMSE": [
+      0.6115679562651012,
+      0.7465759512414442
+    ],
+    "R2": [
+      0.5324887968370822,
+      0.6944132686883966
+    ]
+  },
+  "test_interval_nominal_90": {
+    "half_width_pIC50": 1.3231776353041411,
+    "empirical_coverage": 0.9365384615384615
+  },
+  "split_sizes": {
+    "train": 2006,
+    "validation": 525,
+    "test": 520,
+    "validation_selection": 202,
+    "validation_calibration": 323
+  },
+  "split_scaffolds": {
+    "train": 848,
+    "validation": 212,
+    "test": 266
+  },
+  "activity_distribution": {
+    "train": {
+      "count": 2006.0,
+      "mean": 7.4470634198703545,
+      "std": 1.0949289966358644,
+      "min": 4.2441251443275085,
+      "25%": 6.654038988503856,
+      "50%": 7.42021640338319,
+      "75%": 8.235640038307253,
+      "max": 10.522878745280337
+    },
+    "validation": {
+      "count": 525.0,
+      "mean": 7.332778840916004,
+      "std": 1.1292894687139725,
+      "min": 4.2076083105017466,
+      "25%": 6.517126416391246,
+      "50%": 7.332547047110046,
+      "75%": 8.18045606445813,
+      "max": 10.0
+    },
+    "test": {
+      "count": 520.0,
+      "mean": 7.373690657595025,
+      "std": 1.108559244768872,
+      "min": 4.522878745280337,
+      "25%": 6.611107706422677,
+      "50%": 7.275724130399211,
+      "75%": 8.10657628346197,
+      "max": 10.045757490560675
+    }
+  },
+  "test_status": "internal scaffold holdout only; prior experimental evaluation on this CSV means it is not virgin external validation",
+  "confidence": "four-regressor prediction SD and nearest training Morgan RDK fingerprint Tanimoto are separate diagnostics; agreement is not itself calibrated probability",
+  "confidence_calibration": {
+    "validation_calibration_rows": 323,
+    "prediction_sd_error_spearman": 0.14765417102786993,
+    "similarity_error_spearman": -0.22914006263198144
+  },
+  "hyperparameters": {
+    "RandomForest": {
+      "n_estimators": 300,
+      "min_samples_leaf": 1,
+      "max_features": 0.5,
+      "max_depth": 28
+    },
+    "ExtraTrees": {
+      "n_estimators": 300,
+      "min_samples_leaf": 1,
+      "max_features": 0.5,
+      "max_depth": 28
+    },
+    "SVR": {
+      "svr__gamma": "scale",
+      "svr__epsilon": 0.1,
+      "svr__C": 5
+    },
+    "XGBoost": {
+      "subsample": 0.8,
+      "n_estimators": 250,
+      "max_depth": 7,
+      "learning_rate": 0.03
+    },
+    "HistGradientBoosting": {
+      "max_leaf_nodes": 15,
+      "max_iter": 300,
+      "learning_rate": 0.04,
+      "l2_regularization": 2.0
+    }
+  },
+  "tuning": [
+    {
+      "model": "RandomForest",
+      "best_cv_rmse": 0.6774947356255145,
+      "best_params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 1,
+        "max_features": 0.5,
+        "max_depth": 28
+      }
+    },
+    {
+      "model": "ExtraTrees",
+      "best_cv_rmse": 0.6864488165931224,
+      "best_params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 1,
+        "max_features": 0.5,
+        "max_depth": 28
+      }
+    },
+    {
+      "model": "SVR",
+      "best_cv_rmse": 0.7974756917392622,
+      "best_params": {
+        "svr__gamma": "scale",
+        "svr__epsilon": 0.1,
+        "svr__C": 5
+      }
+    },
+    {
+      "model": "XGBoost",
+      "best_cv_rmse": 0.6789819163438735,
+      "best_params": {
+        "subsample": 0.8,
+        "n_estimators": 250,
+        "max_depth": 7,
+        "learning_rate": 0.03
+      }
+    },
+    {
+      "model": "HistGradientBoosting",
+      "best_cv_rmse": 0.6804517615051813,
+      "best_params": {
+        "max_leaf_nodes": 15,
+        "max_iter": 300,
+        "learning_rate": 0.04,
+        "l2_regularization": 2.0
+      }
+    }
+  ],
+  "versions": {
+    "python": "3.14.8",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1",
+    "rdkit": "2026.09.2",
+    "xgboost": "3.4.1"
+  },
+  "data_audit": {
+    "records": 3051,
+    "valid_smiles": 3051,
+    "invalid_smiles": 0,
+    "literal_smiles_unique": 3051,
+    "canonical_structures": 3051,
+    "duplicate_structure_groups": 0,
+    "excess_duplicate_rows": 0,
+    "disconnected_smiles": 6,
+    "pIC50_conversion_max_abs_error": 0.0,
+    "conversion_assumption": "IC50 in nM; internal consistency verified, source-unit provenance not present in CSV",
+    "metadata_available": [
+      "Smiles",
+      "canonical_smiles",
+      "IC50",
+      "pIC50",
+      "scaffold_group",
+      "source_rows",
+      "n_source_records"
+    ],
+    "activity_summary": {
+      "count": 3051.0,
+      "mean": 7.414892577414044,
+      "std": 1.1038364606804476,
+      "min": 4.2076083105017466,
+      "10%": 6.070581074285707,
+      "25%": 6.611722044648369,
+      "50%": 7.376750709602099,
+      "75%": 8.218259457302795,
+      "90%": 8.995678626217357,
+      "max": 10.522878745280337
+    }
+  }
+}

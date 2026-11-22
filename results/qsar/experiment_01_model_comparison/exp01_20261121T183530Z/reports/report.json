@@ -1,0 +1,459 @@
+{
+  "experiment": "01 repeated scaffold-aware model comparison",
+  "run_id": "exp01_20261121T183530Z",
+  "scaffold_cv_repeats": 2,
+  "outer_folds": 5,
+  "search_trials_per_model_fold": 3,
+  "summary": [
+    {
+      "model": "ExtraTrees",
+      "folds": 10,
+      "RMSE_mean": 0.6756123056634813,
+      "RMSE_sd": 0.045596535834110184,
+      "RMSE_median": 0.6754840331460764,
+      "RMSE_q25": 0.6616200112272964,
+      "RMSE_q75": 0.7035618892736275,
+      "MAE_mean": 0.5026180593510138,
+      "R2_mean": 0.6171049750318393
+    },
+    {
+      "model": "HistGradientBoosting",
+      "folds": 10,
+      "RMSE_mean": 0.6628739668101028,
+      "RMSE_sd": 0.04345709738134982,
+      "RMSE_median": 0.6627585668389293,
+      "RMSE_q25": 0.6426578250900804,
+      "RMSE_q75": 0.6871084762819017,
+      "MAE_mean": 0.49215869162449427,
+      "R2_mean": 0.6316397491255357
+    },
+    {
+      "model": "RandomForest",
+      "folds": 10,
+      "RMSE_mean": 0.6645168669895584,
+      "RMSE_sd": 0.038339504450503256,
+      "RMSE_median": 0.6705938758230263,
+      "RMSE_q25": 0.6531302492353803,
+      "RMSE_q75": 0.684834251106266,
+      "MAE_mean": 0.4953040387890753,
+      "R2_mean": 0.6300385794733783
+    },
+    {
+      "model": "SVR",
+      "folds": 10,
+      "RMSE_mean": 0.776938209705442,
+      "RMSE_sd": 0.037048228885480844,
+      "RMSE_median": 0.765287974600698,
+      "RMSE_q25": 0.748782113691487,
+      "RMSE_q75": 0.8020646056180707,
+      "MAE_mean": 0.5887978132422677,
+      "R2_mean": 0.4950759361562037
+    },
+    {
+      "model": "Stacking",
+      "folds": 10,
+      "RMSE_mean": 0.6482989122635578,
+      "RMSE_sd": 0.036505505340852465,
+      "RMSE_median": 0.6564329532755531,
+      "RMSE_q25": 0.6372852317562636,
+      "RMSE_q75": 0.6617898836785163,
+      "MAE_mean": 0.4825034138879129,
+      "R2_mean": 0.6478749100091037
+    },
+    {
+      "model": "XGBoost",
+      "folds": 10,
+      "RMSE_mean": 0.6605707598701634,
+      "RMSE_sd": 0.034675792173347784,
+      "RMSE_median": 0.669176188510821,
+      "RMSE_q25": 0.6472972533666121,
+      "RMSE_q75": 0.6737032297075198,
+      "MAE_mean": 0.49185591655947186,
+      "R2_mean": 0.6346704295072505
+    }
+  ],
+  "paired_rmse": [
+    {
+      "metric": "RMSE",
+      "comparison": "Stacking minus HistGradientBoosting",
+      "paired_fold_n": 10,
+      "mean_difference": -0.01457505454654503,
+      "median_difference": -0.010713138859552107,
+      "folds_stacking_better": 10,
+      "fold_difference_sd": 0.011169081756815854,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.01751308206761121,
+          -0.002604610631169594
+        ],
+        "RMSE_difference_95CI": [
+          -0.025688477848601593,
+          -0.0050216402112819155
+        ],
+        "R2_difference_95CI": [
+          0.005316888887372285,
+          0.027819518540837505
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "MAE",
+      "comparison": "Stacking minus HistGradientBoosting",
+      "paired_fold_n": 10,
+      "mean_difference": -0.00965527773658138,
+      "median_difference": -0.010036443650160376,
+      "folds_stacking_better": 9,
+      "fold_difference_sd": 0.0071259712279190795,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.01751308206761121,
+          -0.002604610631169594
+        ],
+        "RMSE_difference_95CI": [
+          -0.025688477848601593,
+          -0.0050216402112819155
+        ],
+        "R2_difference_95CI": [
+          0.005316888887372285,
+          0.027819518540837505
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "R2",
+      "comparison": "Stacking minus HistGradientBoosting",
+      "paired_fold_n": 10,
+      "mean_difference": 0.016235160883568068,
+      "median_difference": 0.01121593549262384,
+      "folds_stacking_better": 10,
+      "fold_difference_sd": 0.012897108242790854,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.01751308206761121,
+          -0.002604610631169594
+        ],
+        "RMSE_difference_95CI": [
+          -0.025688477848601593,
+          -0.0050216402112819155
+        ],
+        "R2_difference_95CI": [
+          0.005316888887372285,
+          0.027819518540837505
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "RMSE",
+      "comparison": "Stacking minus XGBoost",
+      "paired_fold_n": 10,
+      "mean_difference": -0.012271847606605591,
+      "median_difference": -0.013517123547789722,
+      "folds_stacking_better": 9,
+      "fold_difference_sd": 0.01268507714208345,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.014478465773972184,
+          -0.004431032627500162
+        ],
+        "RMSE_difference_95CI": [
+          -0.01845283711198673,
+          -0.006481222200543735
+        ],
+        "R2_difference_95CI": [
+          0.00679790517977876,
+          0.02056764863109282
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "MAE",
+      "comparison": "Stacking minus XGBoost",
+      "paired_fold_n": 10,
+      "mean_difference": -0.009352502671558937,
+      "median_difference": -0.010564392248113563,
+      "folds_stacking_better": 9,
+      "fold_difference_sd": 0.01120108928655443,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.014478465773972184,
+          -0.004431032627500162
+        ],
+        "RMSE_difference_95CI": [
+          -0.01845283711198673,
+          -0.006481222200543735
+        ],
+        "R2_difference_95CI": [
+          0.00679790517977876,
+          0.02056764863109282
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "R2",
+      "comparison": "Stacking minus XGBoost",
+      "paired_fold_n": 10,
+      "mean_difference": 0.013204480501853178,
+      "median_difference": 0.014327811218272979,
+      "folds_stacking_better": 9,
+      "fold_difference_sd": 0.014035641419839047,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.014478465773972184,
+          -0.004431032627500162
+        ],
+        "RMSE_difference_95CI": [
+          -0.01845283711198673,
+          -0.006481222200543735
+        ],
+        "R2_difference_95CI": [
+          0.00679790517977876,
+          0.02056764863109282
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "RMSE",
+      "comparison": "Stacking minus RandomForest",
+      "paired_fold_n": 10,
+      "mean_difference": -0.016217954726000506,
+      "median_difference": -0.015750360479020342,
+      "folds_stacking_better": 9,
+      "fold_difference_sd": 0.009650545703485048,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.01933025966928551,
+          -0.006477682733806297
+        ],
+        "RMSE_difference_95CI": [
+          -0.023827345395813555,
+          -0.009064782391447982
+        ],
+        "R2_difference_95CI": [
+          0.009789177308975019,
+          0.0260901543976163
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "MAE",
+      "comparison": "Stacking minus RandomForest",
+      "paired_fold_n": 10,
+      "mean_difference": -0.012800624901162377,
+      "median_difference": -0.011832497732882336,
+      "folds_stacking_better": 10,
+      "fold_difference_sd": 0.008262350157646916,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.01933025966928551,
+          -0.006477682733806297
+        ],
+        "RMSE_difference_95CI": [
+          -0.023827345395813555,
+          -0.009064782391447982
+        ],
+        "R2_difference_95CI": [
+          0.009789177308975019,
+          0.0260901543976163
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "R2",
+      "comparison": "Stacking minus RandomForest",
+      "paired_fold_n": 10,
+      "mean_difference": 0.01783633053572551,
+      "median_difference": 0.017802738046551803,
+      "folds_stacking_better": 9,
+      "fold_difference_sd": 0.010547975634002163,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.01933025966928551,
+          -0.006477682733806297
+        ],
+        "RMSE_difference_95CI": [
+          -0.023827345395813555,
+          -0.009064782391447982
+        ],
+        "R2_difference_95CI": [
+          0.009789177308975019,
+          0.0260901543976163
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "RMSE",
+      "comparison": "Stacking minus ExtraTrees",
+      "paired_fold_n": 10,
+      "mean_difference": -0.027313393399923502,
+      "median_difference": -0.02738399195549185,
+      "folds_stacking_better": 10,
+      "fold_difference_sd": 0.015586201884812101,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.02800934931379205,
+          -0.012549101835345954
+        ],
+        "RMSE_difference_95CI": [
+          -0.037016003072399814,
+          -0.019245986556447093
+        ],
+        "R2_difference_95CI": [
+          0.0207456925781656,
+          0.041153173989735024
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "MAE",
+      "comparison": "Stacking minus ExtraTrees",
+      "paired_fold_n": 10,
+      "mean_difference": -0.020114645463100895,
+      "median_difference": -0.01769258723439296,
+      "folds_stacking_better": 9,
+      "fold_difference_sd": 0.016485187541283596,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.02800934931379205,
+          -0.012549101835345954
+        ],
+        "RMSE_difference_95CI": [
+          -0.037016003072399814,
+          -0.019245986556447093
+        ],
+        "R2_difference_95CI": [
+          0.0207456925781656,
+          0.041153173989735024
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "R2",
+      "comparison": "Stacking minus ExtraTrees",
+      "paired_fold_n": 10,
+      "mean_difference": 0.03076993497726447,
+      "median_difference": 0.030396684505885063,
+      "folds_stacking_better": 10,
+      "fold_difference_sd": 0.018484063464345737,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.02800934931379205,
+          -0.012549101835345954
+        ],
+        "RMSE_difference_95CI": [
+          -0.037016003072399814,
+          -0.019245986556447093
+        ],
+        "R2_difference_95CI": [
+          0.0207456925781656,
+          0.041153173989735024
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "RMSE",
+      "comparison": "Stacking minus SVR",
+      "paired_fold_n": 10,
+      "mean_difference": -0.12863929744188424,
+      "median_difference": -0.1243955455208346,
+      "folds_stacking_better": 10,
+      "fold_difference_sd": 0.027090619164479083,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.12256789210247633,
+          -0.09057763678480785
+        ],
+        "RMSE_difference_95CI": [
+          -0.1503589309221597,
+          -0.10729418609301059
+        ],
+        "R2_difference_95CI": [
+          0.12978442235820484,
+          0.17396427972890807
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "MAE",
+      "comparison": "Stacking minus SVR",
+      "paired_fold_n": 10,
+      "mean_difference": -0.10629439935435478,
+      "median_difference": -0.10302954533254599,
+      "folds_stacking_better": 10,
+      "fold_difference_sd": 0.02239085102404204,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.12256789210247633,
+          -0.09057763678480785
+        ],
+        "RMSE_difference_95CI": [
+          -0.1503589309221597,
+          -0.10729418609301059
+        ],
+        "R2_difference_95CI": [
+          0.12978442235820484,
+          0.17396427972890807
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    },
+    {
+      "metric": "R2",
+      "comparison": "Stacking minus SVR",
+      "paired_fold_n": 10,
+      "mean_difference": 0.15279897385290006,
+      "median_difference": 0.1481108765933985,
+      "folds_stacking_better": 10,
+      "fold_difference_sd": 0.0313015989020405,
+      "scaffold_cluster_bootstrap": {
+        "MAE_difference_95CI": [
+          -0.12256789210247633,
+          -0.09057763678480785
+        ],
+        "RMSE_difference_95CI": [
+          -0.1503589309221597,
+          -0.10729418609301059
+        ],
+        "R2_difference_95CI": [
+          0.12978442235820484,
+          0.17396427972890807
+        ],
+        "bootstrap_replicates": 1000,
+        "cluster_unit": "Bemis-Murcko scaffold"
+      }
+    }
+  ],
+  "interpretation_limit": "Fold results are paired and scaffold-held-out. With few repeated folds, paired differences are descriptive; do not claim superiority from small differences. This is internal validation, not external validation.",
+  "software": {
+    "python": "3.14.8",
+    "sklearn": "1.9.1",
+    "rdkit": "2026.09.2",
+    "xgboost": "3.4.1"
+  }
+}

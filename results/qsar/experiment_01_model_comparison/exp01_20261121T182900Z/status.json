@@ -1,0 +1,6 @@
+{
+  "status": "failed_before_model_fit",
+  "reason": "Initial runner referenced config keys at the wrong level (KeyError: seeds).",
+  "outputs": "Configuration and launch log retained; no model results were produced.",
+  "superseded_by": "exp01_20261121T183530Z"
+}

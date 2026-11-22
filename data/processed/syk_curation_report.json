@@ -1,0 +1,24 @@
+{
+  "source": "C:\\Users\\pranj\\Desktop\\QSAR VECTOR+\\processed_df.csv",
+  "input_records": 3176,
+  "valid_structures": 3176,
+  "unique_literal_smiles": 3176,
+  "unique_canonical_structures": 3051,
+  "duplicate_groups": 117,
+  "extra_records_removed": 125,
+  "duplicate_rule": "within 10% of median IC50: average IC50; otherwise retain minimum IC50, adapted from the Syk paper; exact repeated values collapse to one",
+  "activity_pIC50_conversion": "9-log10(IC50[nM]); internal arithmetic verified, source units remain unverified",
+  "warning": "The minimum-IC50 branch favors potency and can bias labels upward. Source assay metadata are unavailable. Input appears to be post-IQR-filtered; raw records are required to revisit that filtering.",
+  "pIC50_summary": {
+    "count": 3051.0,
+    "mean": 7.414892577414044,
+    "std": 1.1038364606804476,
+    "min": 4.2076083105017466,
+    "10%": 6.070581074285707,
+    "25%": 6.611722044648369,
+    "50%": 7.376750709602099,
+    "75%": 8.218259457302795,
+    "90%": 8.995678626217357,
+    "max": 10.522878745280337
+  }
+}

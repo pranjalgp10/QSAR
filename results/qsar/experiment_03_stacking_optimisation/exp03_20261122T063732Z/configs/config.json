@@ -1,0 +1,97 @@
+{
+  "experiment_id": "03_stacking_architecture_optimization",
+  "data": "data/processed/syk_qsar_curated.csv",
+  "reference_benchmark_used_for_tuning": false,
+  "fingerprint": {
+    "family": "Morgan",
+    "radius": 2,
+    "bits": 2048
+  },
+  "split": {
+    "method": "single five-fold shuffled GroupKFold by Bemis-Murcko scaffold",
+    "outer_folds": 5,
+    "seed": 1701,
+    "meta_oof_folds": 3,
+    "inner_tuning_folds": 3
+  },
+  "outer_folds": 5,
+  "seed": 1701,
+  "meta_oof_folds": 3,
+  "base_search_trials": 2,
+  "base_search": {
+    "method": "RandomizedSearchCV",
+    "trials_per_fit": 2,
+    "scoring": "negative_root_mean_squared_error",
+    "seed_policy": "deterministic outer-fold/meta-fold/base-model offsets"
+  },
+  "base_models": [
+    "RandomForest",
+    "ExtraTrees",
+    "SVR",
+    "XGBoost",
+    "HistGradientBoosting"
+  ],
+  "base_combinations": {
+    "all5": [
+      "RandomForest",
+      "ExtraTrees",
+      "SVR",
+      "XGBoost",
+      "HistGradientBoosting"
+    ],
+    "boosting_pair": [
+      "XGBoost",
+      "HistGradientBoosting"
+    ],
+    "rf_boosting": [
+      "RandomForest",
+      "XGBoost",
+      "HistGradientBoosting"
+    ],
+    "rf_et_xgb": [
+      "RandomForest",
+      "ExtraTrees",
+      "XGBoost"
+    ],
+    "complementarity_svr": [
+      "RandomForest",
+      "XGBoost",
+      "HistGradientBoosting",
+      "SVR"
+    ]
+  },
+  "meta_models": {
+    "OLS": {
+      "type": "LinearRegression"
+    },
+    "Ridge": {
+      "type": "Ridge",
+      "alphas": [
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ]
+    },
+    "ElasticNet": {
+      "type": "ElasticNet",
+      "alpha": 0.01,
+      "l1_ratios": [
+        0.1,
+        0.5,
+        0.9
+      ],
+      "max_iter": 20000
+    }
+  },
+  "metrics": [
+    "MAE",
+    "MSE",
+    "RMSE",
+    "R2",
+    "median_absolute_error",
+    "residual_mean",
+    "residual_sd"
+  ],
+  "compute_note": "One outer scaffold allocation and two base-search trials per fit are predeclared to bound nested-CV compute. Candidate comparisons are exploratory; final selected-candidate performance requires a later independent evaluation."
+}

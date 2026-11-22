@@ -1,0 +1,18 @@
+{
+  "outer_scaffold_cv_seeds": [140, 141],
+  "outer_folds_per_repeat": 5,
+  "outer_fold_random_state": "repeat seed",
+  "calibration_group_split_random_state": "outer seed + 7000 + fold index",
+  "base_model_fit_random_state": "outer seed + fold index + repeat index * 100 + base model index",
+  "direct_classifier_random_state": "outer seed + repeat index * 100 + fold index",
+  "final_full_data_base_fit_seed": 1717,
+  "final_stack_meta_model": "Ridge is deterministic given fixed features",
+  "y_scrambling_base_seed": 9201,
+  "y_scrambling_permutations": 20,
+  "learning_curve_seed": 140,
+  "representation_sensitivity_seed": 140,
+  "scaffold_bootstrap_seed": 140,
+  "classification_bootstrap_seed": 141,
+  "postprocess_bootstrap_seeds": "deterministically derived from metric or interval key",
+  "determinism_note": "All partitions are Bemis-Murcko scaffold-grouped. Model and analysis seeds are fixed in config.json and source."
+}
