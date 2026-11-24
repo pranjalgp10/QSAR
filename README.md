@@ -4,7 +4,7 @@ This repository develops a Syk inhibitor QSAR predictor as one component of a la
 
 ## Current status
 
-The final QSAR development run is complete. It used the 3,051-row curated Syk dataset and repeated five-fold scaffold-grouped validation. The primary model is a five-model Ridge stack using Random Forest, ExtraTrees, SVR, XGBoost and HistGradientBoosting. Its pooled internal scaffold results were MAE 0.499, RMSE 0.669 (scaffold-bootstrap 95% CI 0.639–0.699), and R² 0.633. The regression-derived median-split classifier had active precision 0.846, inactive precision 0.849, MCC 0.695 and ROC-AUC 0.914.
+The model used the 3,051-row curated Syk dataset and repeated five-fold scaffold-grouped validation. The primary model is a five-model Ridge stack using Random Forest, ExtraTrees, SVR, XGBoost and HistGradientBoosting. Its pooled internal scaffold results were MAE 0.499, RMSE 0.669 (scaffold-bootstrap 95% CI 0.639–0.699), and R² 0.633. The regression-derived median-split classifier had active precision 0.846, inactive precision 0.849, MCC 0.695 and ROC-AUC 0.914.
 
 These are **internal scaffold validation results**, not external validation. Prior experiments examined the same dataset. The model returns `caution` for valid molecules because no validated pseudolabel-acceptance threshold or generated-molecule performance has been established. See the [final report](experiments/final_qsar/final_qsar_20261122T091131Z/final_report.md) and [limitations](experiments/final_qsar/final_qsar_20261122T091131Z/limitations.md).
 
